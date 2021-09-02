@@ -14,4 +14,26 @@
         <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
         <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
     </address>
+    <hr />
+    <h2>Tell Us About Yourself</h2>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-12">
+                <label class="control-label">Full Name:</label>
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <label class="control-label">Video Game:</label>
+                <select class="form-control m-t-lg">
+                    <option value="0">No Video Game</option>
+                    <% foreach (VideoGame vg in VideoGameList) %>
+                    <%{ %>
+                    <option value="<%=vg.id %>"><%=vg.name %></option>
+                    <% } %>
+                </select>
+            </div>
+        </div>
+    </div>
 </asp:Content>

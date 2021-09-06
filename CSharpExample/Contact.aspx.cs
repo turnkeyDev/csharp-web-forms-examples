@@ -35,5 +35,10 @@ namespace CSharpExample
             public int id { get; set; }
             public string name { get; set; }
         }
+
+        protected void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            //Do submit items here
+        }
     }
 }

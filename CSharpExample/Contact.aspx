@@ -35,5 +35,10 @@
                 </select>
             </div>
         </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <asp:Button runat="server" ID="BtnSubmit" OnClick="BtnSubmit_Click" Text="Submit Me!" />
+            </div>
+        </div>
     </div>
 </asp:Content>

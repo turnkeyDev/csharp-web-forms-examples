@@ -9,11 +9,14 @@ namespace CSharpExample2
 {
     public partial class SubmissionHome : System.Web.UI.Page
     {
+        protected string TypedText;
+        protected bool isSubmitted = false;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.Form["txttest"] != null)
+            if (!string.IsNullOrWhiteSpace(Request.Form["txttest"]))
             {
-                string textFromTest = Request.Form["txttest"];
+                TypedText = Request.Form["txttest"];
+                isSubmitted = true;
             }
 
         }

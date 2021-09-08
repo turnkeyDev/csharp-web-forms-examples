@@ -13,9 +13,9 @@ namespace CSharpExample2.handlers
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "application/json";
-            context.Response.Write(0);
-            context.Response.End();
+                context.Response.ContentType = "application/json";
+                context.Response.Write(0);
+                context.Response.End();
         }
 
         public bool IsReusable

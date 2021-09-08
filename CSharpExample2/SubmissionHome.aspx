@@ -67,17 +67,17 @@
         });
         $('#btn-reset').on('click', function () {
             $.ajax({
-                url: "/SubmissionHomeHandler.ashx",
+                url: "handlers/SubmissionHomeHandler.ashx",
                 dataType: 'json',
                 contentType: "application/json; charset=uft-8",
                 data: { c: parseInt($('#hidcount').val()) },
                 type: 'POST',
                 success: function (data) {
                     $('#hidcount').val(data);
-                    toastr.success('The count has been reset to ' + data + '.', 'Success')
+                    toastr.success('The count has been reset to ' + data + '.', 'Success');
                 },
                 error: function (data) {
-                    toastr.error('The counter could not be reset to 0. ' + data, 'Error');
+                    toastr.error('The counter could not be reset to 0. Reason: ' + data.status, 'Error');
                 }
             });
         });
